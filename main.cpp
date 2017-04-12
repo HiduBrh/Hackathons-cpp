@@ -16,14 +16,13 @@ int main() {
     int selection = 0;
 
     do{
-        std::cout << "---------1 ->Créer Hackaton-------"<< std::endl;
-        std::cout << "--------2 ->Selectionner Hackaton--" << std::endl;
+        std::cout <<"1 Créer Hackaton"<< std::endl;
+        std::cout <<"2 Selectionner Hackaton" << std::endl;
         std::cout <<"3 Ajoutez une équipe!"<< std::endl;
         std::cout <<"4 Ajoutez une étape!"<< std::endl;
         std::cout <<"5 Ajoutez une note!"<< std::endl;
-        std::cout << "-------3 ->Ajouter équipe---------" << std::endl;
-        std::cout << "---------4 ->Ajouter note---------" << std::endl;
-        std::cout << "-----------5 ->Sortir-------------" << std::endl;
+        std::cout <<"6 Terminer étape!"<< std::endl;
+        std::cout << "-----------7 ->Sortir-------------" << std::endl;
         cin >> selection;
 
         switch (selection) {
@@ -63,7 +62,13 @@ int main() {
                 cin >> name;
                 hackathon.ajouter_une_note(note, name);
                 break;
-              
+
+
+            case 6:
+                hackathon.terminer_etape();
+                break;
+            case 7:
+                exit(0);
 
             default:
                 cout<< "Mauvaise entrée.\n";
