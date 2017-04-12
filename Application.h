@@ -12,7 +12,7 @@ public:
 
     Hackathon &operator[](const int &i);
 
-    const Hackathon operator[](const int &i) const;
+    Hackathon operator[](const int &i) const;
 
     Hackathon & creer_hackaton();
 

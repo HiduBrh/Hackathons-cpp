@@ -13,7 +13,7 @@ Hackathon &Application::operator[](const int &i) {
     return this->hackatons[i];
 }
 
-const Hackathon Application::operator[](const int &i) const {
+Hackathon Application::operator[](const int &i) const {
     return this->hackatons[i];
 }
 
