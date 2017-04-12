@@ -4,7 +4,7 @@
 
 #include "Etape.h"
 
-Etape::Etape(double duree) : duree(duree),ordre(++Etape::ordre_gen),termine(false) {}
+Etape::Etape(double duree, unsigned int num) : duree(duree),ordre(num),termine(false) {}
 
 
 double Etape::getDuree() const {

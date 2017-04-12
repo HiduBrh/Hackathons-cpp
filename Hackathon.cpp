@@ -21,3 +21,7 @@ const vector<Etape> &Hackathon::getEtapes(){
 void Hackathon::setEtapes(const vector<Etape> &etapes) {
     this->etapes = etapes;
 }
+
+Hackathon::Hackathon() {
+    ordre_gen=0;
+}

@@ -13,7 +13,6 @@ class Etape {
 
 private:
 
-    static unsigned int ordre_gen;
     unsigned int ordre;
     double duree;
     vector<Note> notes;
