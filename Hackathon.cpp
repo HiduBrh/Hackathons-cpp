@@ -4,6 +4,8 @@
 
 #include "Hackathon.h"
 
+
+
 const vector<Equipe> &Hackathon::getEquipes(){
     return equipes;
 }

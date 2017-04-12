@@ -5,6 +5,9 @@
 #ifndef HACKATHONS_HACKATHON_H
 #define HACKATHONS_HACKATHON_H
 
+#include "Equipe.h"
+#include "Etape.h"
+#include <vector>
 
 class Hackathon {
 
