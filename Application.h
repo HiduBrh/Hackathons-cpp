@@ -1,0 +1,10 @@
+#ifndef HACKATHONS_APPLICATION_H
+#define HACKATHONS_APPLICATION_H
+
+
+class Application {
+
+};
+
+
+#endif //HACKATHONS_APPLICATION_H
