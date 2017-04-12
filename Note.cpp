@@ -1,18 +1,14 @@
-//
-// Created by idu on 11/04/2017.
-//
-
 #include "Note.h"
 
 const float Note::coeff = 0.05;
 
 Note::Note(unsigned int note, const Equipe &equipe) : equipe(equipe) {
-    if(equipe.getMembres_number()==5)
-        this->note=note;
-    else if(equipe.getMembres_number()<5)
-            this->note=note+Note::coeff*note;
-        else
-            this->note=note-Note::coeff*note;
+    if (equipe.getMembres_number() == 5)
+        this->note = note;
+    else if (equipe.getMembres_number() < 5)
+        this->note = note + Note::coeff * note;
+    else
+        this->note = note - Note::coeff * note;
 
 }
 
@@ -21,12 +17,12 @@ unsigned int Note::getNote() const {
 }
 
 void Note::setNote(unsigned int note) {
-    if(equipe.getMembres_number()==5)
-        this->note=note;
-    else if(equipe.getMembres_number()<5)
-        this->note=note+Note::coeff*note;
+    if (equipe.getMembres_number() == 5)
+        this->note = note;
+    else if (equipe.getMembres_number() < 5)
+        this->note = note + Note::coeff * note;
     else
-        this->note=note-Note::coeff*note;
+        this->note = note - Note::coeff * note;
 
 }
 

@@ -9,7 +9,7 @@ Utilisateur::~Utilisateur() {
 
 }
 
-const Application & Utilisateur::get_application() {
+const Application &Utilisateur::get_application() {
     return this->application;
 }
 

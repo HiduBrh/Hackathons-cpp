@@ -1,7 +1,3 @@
-//
-// Created by idu on 11/04/2017.
-//
-
 #ifndef HACKATHONS_NOTE_H
 #define HACKATHONS_NOTE_H
 
