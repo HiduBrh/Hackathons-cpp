@@ -19,11 +19,7 @@ private:
     bool termine;
 public:
 
-<<<<<<< HEAD
     Etape(double duree,unsigned int num);
-=======
-    Etape(double duree, unsigned int num);
->>>>>>> origin/master
 
     double getDuree() const;
 

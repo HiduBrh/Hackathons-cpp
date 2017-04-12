@@ -66,3 +66,7 @@ Etape& Hackathon::recuperer_etape(const unsigned int num){
             return const_cast<Etape &>(etape);
     }
 }
+void Hackathon::ajouter_une_note(double note,const string& nom_equipe){
+    Equipe equipe=recuperer_equipe(nom_equipe);
+
+}

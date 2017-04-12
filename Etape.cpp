@@ -19,10 +19,6 @@ void Etape::setNotes(const vector<Note> &notes) {
     Etape::notes = notes;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 unsigned int Etape::getOrdre() const {
     return ordre;
 }
