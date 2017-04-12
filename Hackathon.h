@@ -40,6 +40,8 @@ public:
 
     void ajouter_une_note(const unsigned int &idEquipe, const double &note);
 
+    friend std::ostream &operator<<(std::ostream &os, const Hackathon& hackathon);
+
     void terminer_etape();
 };
 

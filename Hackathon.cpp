@@ -27,7 +27,7 @@ void Hackathon::afficher_classement() {
 
     std::sort(equipes.begin(), equipes.end(), compare);
     cout << "Classement provisoire:" << endl;
-    for (auto const &equipe : equipes) {
+    for (const Equipe &equipe : equipes) {
         cout << equipe.getNom() << " :\t" << equipe.getNoteGlobalHack() << endl;
     }
 }
@@ -69,3 +69,9 @@ void Hackathon::terminer_etape() {
     afficher_classement();
 }
 
+std::ostream &operator<<(std::ostream &os, const Hackathon &hackathon) {
+    for (const Equipe &equipe : hackathon.equipes) {
+       os << equipe.getId() << ".\t" << equipe.getNoteGlobalHack() << std::endl;
+    }
+    return os;
+}
