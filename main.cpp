@@ -19,12 +19,13 @@ int main() {
 
     do {
         std::cout << "1 Creer Hackaton" << std::endl;
-        std::cout << "2 Selectionner Hackaton" << std::endl;
-        std::cout << "3 Ajoutez une equipe!" << std::endl;
-        std::cout << "4 Ajoutez une etape!" << std::endl;
-        std::cout << "5 Ajoutez une note!" << std::endl;
-        std::cout << "6 Terminer etape!" << std::endl;
-        std::cout << "-----------7 ->Sortir-------------" << std::endl;
+        std::cout << "2 Afficher les Hackaton" << std::endl;
+        std::cout << "3 Selectionner Hackaton" << std::endl;
+        std::cout << "4 Ajoutez une equipe!" << std::endl;
+        std::cout << "5 Ajoutez une etape!" << std::endl;
+        std::cout << "6 Ajoutez une note!" << std::endl;
+        std::cout << "7 Terminer etape!" << std::endl;
+        std::cout << "-----------8 ->Sortir-------------" << std::endl;
         cin >> selection;
 
         switch (selection) {
@@ -33,12 +34,15 @@ int main() {
                 std::cout << "Hackaton cree!" << std::endl;
                 break;
             case 2:
+                std::cout <<application<< std::endl;
+                break;
+            case 3:
                 int i;
                 std::cout << "saisir le numéro du hackaton" << std::endl;
                 cin >> i;
                 hackathon = utilisateur.get_application()[i];
                 break;
-            case 3: {
+            case 4: {
                 int number_member;
                 std::cout << "saisir le nom de l'equipe" << std::endl;
                 cin >> name;
@@ -47,15 +51,13 @@ int main() {
                 hackathon.ajouter_equipe(name, number_member);
                 break;
             }
-            case 4: {
+            case 5: {
                 std::cout << "saisir la duree de l'etape" << std::endl;
                 cin >> duree;
-                std::cout << "et le numero de l'epreuve" << std::endl;
-                cin >> num;
-                hackathon.ajouter_etape(duree, num);
+                hackathon.ajouter_etape(duree);
                 break;
             }
-            case 5: {
+            case 6: {
                 std::cout << "saisir la note de l'equipe" << std::endl;
                 cin >> note;
                 std::cout << "et le numero de l'epreuve" << std::endl;
@@ -63,10 +65,10 @@ int main() {
                 hackathon.ajouter_une_note(note, name);
                 break;
             }
-            case 6:
+            case 7:
                 hackathon.terminer_etape();
                 break;
-            case 7:
+            case 8:
                 exit(0);
 
             default:
