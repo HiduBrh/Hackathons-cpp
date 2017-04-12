@@ -17,6 +17,7 @@ private:
     unsigned int id;
     string nom;
     unsigned int nombreMembres;
+    double noteGlobalHack;
 
 public:
 
@@ -39,6 +40,13 @@ public:
     double get_coeff() const;
 
     friend ostream &operator<<(ostream &os, const Equipe &equipe);
+
+    double getNoteGlobalHack() const;
+
+    void setNoteGlobalHack(double noteGlobalHack);
+
+    void updateNoteEquipe(double note);
+
 };
 
 

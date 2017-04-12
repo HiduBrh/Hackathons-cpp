@@ -22,27 +22,17 @@ Hackathon::Hackathon() {
 }
 
 void Hackathon::afficher_classement() {
-    std::map<std::string, double> notesProvisoires;
-    vector<Note> notes;
-    for (vector<Etape>::iterator i = etapes.begin(); i != etapes.end(); ++i) {
-        notes = i.operator*().getNotes();
-        for (vector<Note>::iterator j = notes.begin(); j != notes.end(); ++j) {
-            if (notesProvisoires.find(j.operator*().getEquipe().getNom()) == notesProvisoires.end()) {
-                notesProvisoires[j.operator*().getEquipe().getNom()] = j.operator*().getNote();
-            } else {
-                notesProvisoires[j.operator*().getEquipe().getNom()] += j.operator*().getNote();
-            }
-        }
-    }
-    std::sort(notesProvisoires.begin(), notesProvisoires.end(), compare);
+    //std::map<std::string, double> notesProvisoires;
+
+    std::sort(equipes.begin(), equipes.end(), compare);
     cout << "Classement provisoire:" << endl;
-    for (auto const &note : notesProvisoires) {
-        cout << note.first << " :\t" << note.second << endl;
+    for (auto const &equipe : equipes) {
+        cout << equipe.getNom() << " :\t" << equipe.getNoteGlobalHack() << endl;
     }
 }
 
-bool Hackathon::compare(double i, double j) {
-    return (i < j);
+bool Hackathon::compare(Equipe i, Equipe j) {
+    return (i.getNoteGlobalHack() > j.getNoteGlobalHack());
 }
 
 void Hackathon::ajouter_equipe(const string &nom, unsigned int membres_number) {

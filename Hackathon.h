@@ -14,7 +14,7 @@ private:
     vector<Equipe> equipes;
     vector<Etape> etapes;
 
-    static bool compare(double i, double j);
+    static bool compare(Equipe i, Equipe j);
 
 public:
     Hackathon();
