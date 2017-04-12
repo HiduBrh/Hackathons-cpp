@@ -19,7 +19,7 @@ private:
     bool termine;
 public:
 
-    Etape(double duree);
+    Etape(double duree,unsigned int num);
 
     double getDuree() const;
 

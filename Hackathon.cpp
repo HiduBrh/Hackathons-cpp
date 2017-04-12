@@ -25,3 +25,44 @@ void Hackathon::setEtapes(const vector<Etape> &etapes) {
 Hackathon::Hackathon() {
     ordre_gen=0;
 }
+string &Hackathon::afficher_classement(){
+    std::map<std::string, double> notesProvisoires;
+    vector<Note> notes;
+    for(vector<Etape>::iterator i = etapes.begin(); i != etapes.end();++i){
+        notes=i.operator*().getNotes();
+        for(vector<Note>::iterator j = notes.begin(); j != notes.end();++j){
+            if (notesProvisoires.find(j.operator*().getEquipe().getNom())==notesProvisoires.end()){
+                notesProvisoires[j.operator*().getEquipe().getNom()]=j.operator*().getNote();
+            }else{
+                notesProvisoires[j.operator*().getEquipe().getNom()]+=j.operator*().getNote();
+            }
+        }
+    }
+    std::sort(notesProvisoires.begin(),notesProvisoires.end(),compare);
+    cout<<"Classement provisoire:"<<endl;
+    for(auto const &note : notesProvisoires) {
+        cout<< note.first<<" :\t"<<note.second<<endl;
+    }
+
+}
+bool Hackathon::compare (double i,double j) {
+    return (i<j);
+}
+void Hackathon::ajouter_equipe(const string &nom, unsigned int membres_number){
+    equipes.push_back(Equipe(nom,membres_number));
+}
+Equipe& Hackathon::recuperer_equipe(const string &nom){
+    for(auto const &equipe : equipes) {
+        if (equipe.getNom() == nom)
+            return const_cast<Equipe &>(equipe);
+    }
+}
+void Hackathon::ajouter_etape(const double duree, unsigned int num){
+    etapes.push_back(Etape(duree,num));
+}
+Etape& Hackathon::recuperer_etape(const unsigned int num){
+    for(auto const &etape : etapes) {
+        if (etape.getOrdre() == num)
+            return const_cast<Etape &>(etape);
+    }
+}

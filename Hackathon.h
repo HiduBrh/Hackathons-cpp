@@ -8,6 +8,8 @@
 #include "Equipe.h"
 #include "Etape.h"
 #include <vector>
+#include <map>
+#include <algorithm>
 
 class Hackathon {
 
@@ -15,6 +17,7 @@ private:
     unsigned int ordre_gen;
     vector<Equipe> equipes;
     vector<Etape> etapes;
+    bool compare (double i,double j);
 
 public:
     Hackathon();
@@ -23,10 +26,11 @@ public:
     const vector<Equipe> &getEquipes();
     void setEquipes(const vector<Equipe> &equipes);
     const vector<Etape> &getEtapes();
-    void ajouter equipe(const string &nom, unsigned int membres_number);
+    void ajouter_equipe(const string &nom, unsigned int membres_number);
     Equipe& recuperer_equipe(const string &nom);
-    void ajouter etape(const string &nom, unsigned int membres_number);
-    Equipe& recuperer_etape(const string &nom);
+    void ajouter_etape(const double duree, unsigned int num);
+    Etape& recuperer_etape(const unsigned int num);
+    string &afficher_classement();
 
 };
 
