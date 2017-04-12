@@ -23,9 +23,9 @@ public:
     const vector<Equipe> &getEquipes();
     void setEquipes(const vector<Equipe> &equipes);
     const vector<Etape> &getEtapes();
-    void ajouter equipe(const string &nom, unsigned int membres_number);
+    void ajouter_equipe(const string &nom, unsigned int membres_number);
     Equipe& recuperer_equipe(const string &nom);
-    void ajouter etape(const string &nom, unsigned int membres_number);
+    void ajouter_etape(const string &nom, unsigned int membres_number);
     Equipe& recuperer_etape(const string &nom);
 
 };
