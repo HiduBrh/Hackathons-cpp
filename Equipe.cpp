@@ -3,9 +3,11 @@
 const double Equipe::COEFF_DEFAUT = 1.0;
 const int Equipe::NOMBRE_MEMBRE_DEFAUT = 5;
 const double Equipe::VARIATION_COEFF = 0.05;
+unsigned int Equipe::id_gen=0;
+
 
 Equipe::Equipe(const string &nom, unsigned int membres_number) : nom(nom), nombreMembres(membres_number),
-                                                                 id(++Equipe::id_gen) {
+                                                                 id(++Equipe::id_gen) {noteGlobalHack=0.;
 }
 
 Equipe::~Equipe() {
@@ -57,4 +59,15 @@ double Equipe::get_coeff() const {
         }
     }
     return nouveauCoeff;
+}
+
+double Equipe::getNoteGlobalHack() const {
+    return noteGlobalHack;
+}
+
+void Equipe::setNoteGlobalHack(double noteGlobalHack) {
+    Equipe::noteGlobalHack = noteGlobalHack;
+}
+void Equipe::updateNoteEquipe(double note){
+    this->noteGlobalHack+=note;
 }

@@ -10,6 +10,8 @@ double Note::getNote() const {
 
 void Note::setNote(unsigned int note) {
     this->note = note * this->equipe.get_coeff();
+    Equipe e=this->getEquipe();
+    e.updateNoteEquipe(note);
 }
 
 const Equipe &Note::getEquipe() const {
