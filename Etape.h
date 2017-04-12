@@ -29,8 +29,6 @@ public:
 
     void setNotes(const vector<Note> &notes);
 
-    static unsigned int getOrdre_gen();
-
     unsigned int getOrdre() const;
 
     void ajouter_une_note(Note note);
