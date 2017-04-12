@@ -12,6 +12,8 @@ public:
 
     const Application & get_application();
 
+    const set_application(const Application& application);
+
 private:
     Application application;
 
