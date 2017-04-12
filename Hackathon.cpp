@@ -68,5 +68,5 @@ Etape& Hackathon::recuperer_etape(const unsigned int num){
 }
 void Hackathon::ajouter_une_note(double note,const string& nom_equipe){
     Equipe equipe=recuperer_equipe(nom_equipe);
-
+    etapes.end().operator*().ajouter_une_note(Note(note,equipe));
 }
