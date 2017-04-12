@@ -1,7 +1,3 @@
-//
-// Created by idu on 11/04/2017.
-//
-
 #ifndef HACKATHONS_ETAPE_H
 #define HACKATHONS_ETAPE_H
 
