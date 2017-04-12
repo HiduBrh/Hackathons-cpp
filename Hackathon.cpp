@@ -2,7 +2,8 @@
 
 
 Hackathon::Hackathon() {
-    ordre_gen = 0;
+    this->ordre_gen = 0;
+    this->etape_courrante = 0;
 }
 
 const vector<Equipe> &Hackathon::getEquipes() {
@@ -39,10 +40,10 @@ void Hackathon::ajouter_equipe(const string &nom, unsigned int membres_number) {
     equipes.push_back(Equipe(nom, membres_number));
 }
 
-Equipe &Hackathon::recuperer_equipe(const string &nom) {
-    for (auto const &equipe : equipes) {
-        if (equipe.getNom() == nom)
-            return const_cast<Equipe &>(equipe);
+Equipe &Hackathon::recuperer_equipe(const unsigned int &id) {
+    for (Equipe &equipe : equipes) {
+        if (equipe.getId() == id)
+            return equipe;
     }
 }
 
@@ -57,13 +58,14 @@ Etape &Hackathon::recuperer_etape(const unsigned int num) {
     }
 }
 
-void Hackathon::ajouter_une_note(double note, const string &nom_equipe) {
-    Equipe equipe = recuperer_equipe(nom_equipe);
-    etapes.end().operator*().ajouter_une_note(Note(note, equipe));
+void Hackathon::ajouter_une_note(const unsigned int &idEquipe, const double &note) {
+    Equipe equipe = recuperer_equipe(idEquipe);
+    this->etapes[this->etape_courrante].ajouter_une_note(Note(note, equipe));
 }
 
-void Hackathon::terminer_etape(){
-    etapes.end().operator*().terminer_etape();
+void Hackathon::terminer_etape() {
+    if (etape_courrante >= this->etapes.size()) throw std::out_of_range("Le hackathon n'a plus d'etapes.");
+    this->etapes[this->etape_courrante++].terminer_etape();
     afficher_classement();
 }
 

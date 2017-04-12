@@ -13,6 +13,7 @@ private:
     unsigned int ordre_gen;
     vector<Equipe> equipes;
     vector<Etape> etapes;
+    unsigned int etape_courrante;
 
     static bool compare(Equipe i, Equipe j);
 
@@ -29,7 +30,7 @@ public:
 
     void ajouter_equipe(const string &nom, unsigned int membres_number);
 
-    Equipe &recuperer_equipe(const string &nom);
+    Equipe &recuperer_equipe(const unsigned int &id);
 
     void ajouter_etape(const double duree);
 
@@ -37,7 +38,7 @@ public:
 
     void afficher_classement();
 
-    void ajouter_une_note(double note, const string &nom_equipe);
+    void ajouter_une_note(const unsigned int &idEquipe, const double &note);
 
     void terminer_etape();
 };

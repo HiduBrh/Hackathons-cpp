@@ -8,16 +8,12 @@ int main() {
 
     utilisateur.set_application(application);
 
-
-    utilisateur.get_application()[0];
     bool finirProgram = false;
     int selection = 0;
-    string name;
     double duree;
     int num;
-    double note;
 
-    do {
+    while (true) {
         std::cout << "1 Creer Hackaton" << std::endl;
         std::cout << "2 Afficher les Hackaton" << std::endl;
         std::cout << "3 Selectionner Hackaton" << std::endl;
@@ -34,7 +30,7 @@ int main() {
                 std::cout << "Hackaton cree!" << std::endl;
                 break;
             case 2:
-                std::cout <<application<< std::endl;
+                std::cout << utilisateur.get_application() << std::endl;
                 break;
             case 3:
                 int i;
@@ -43,7 +39,8 @@ int main() {
                 hackathon = utilisateur.get_application()[i];
                 break;
             case 4: {
-                int number_member;
+                unsigned int number_member;
+                std::string name;
                 std::cout << "saisir le nom de l'equipe" << std::endl;
                 cin >> name;
                 std::cout << "et le nombre de membre" << std::endl;
@@ -58,11 +55,13 @@ int main() {
                 break;
             }
             case 6: {
+                unsigned int id;
+                double note;
+                std::cout << "saisir le numero de l'equipe" << std::endl;
+                cin >> id;
                 std::cout << "saisir la note de l'equipe" << std::endl;
                 cin >> note;
-                std::cout << "et le numero de l'epreuve" << std::endl;
-                cin >> name;
-                hackathon.ajouter_une_note(note, name);
+                hackathon.ajouter_une_note(id, note);
                 break;
             }
             case 7:
@@ -74,6 +73,6 @@ int main() {
             default:
                 cout << "Mauvaise entree.\n";
         }
-    } while (selection != 5);
+    }
     return (0);
 }

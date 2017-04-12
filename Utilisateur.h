@@ -12,7 +12,7 @@ public:
 
     Application &get_application();
 
-    const void set_application(const Application &application);
+    void set_application(const Application &application);
 
 private:
     Application application;
