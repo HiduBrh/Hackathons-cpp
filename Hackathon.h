@@ -1,7 +1,3 @@
-//
-// Created by idu on 12/04/2017.
-//
-
 #ifndef HACKATHONS_HACKATHON_H
 #define HACKATHONS_HACKATHON_H
 
@@ -23,14 +19,28 @@ public:
     Hackathon();
 
     void setEtapes(const vector<Etape> &etapes);
+
     const vector<Equipe> &getEquipes();
+
     void setEquipes(const vector<Equipe> &equipes);
+
     const vector<Etape> &getEtapes();
+<<<<<<< HEAD
     void ajouter_equipe(const string &nom, unsigned int membres_number);
     Equipe& recuperer_equipe(const string &nom);
     void ajouter_etape(const double duree, unsigned int num);
     Etape& recuperer_etape(const unsigned int num);
     string &afficher_classement();
+=======
+
+    void ajouter_equipe(const string &nom, unsigned int membres_number);
+
+    Equipe &recuperer_equipe(const string &nom);
+
+    void ajouter_etape(const string &nom, unsigned int membres_number);
+
+    Equipe &recuperer_etape(const string &nom);
+>>>>>>> origin/master
 
 };
 

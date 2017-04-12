@@ -10,7 +10,9 @@ public:
 
     ~Utilisateur();
 
-    const Application & get_application();
+    Application &get_application();
+
+    const void set_application(const Application &application);
 
 private:
     Application application;

@@ -1,7 +1,3 @@
-//
-// Created by idu on 11/04/2017.
-//
-
 #ifndef HACKATHONS_NOTE_H
 #define HACKATHONS_NOTE_H
 
@@ -11,20 +7,16 @@
 class Note {
 
 private:
-
-    unsigned int note;
-    static const float coeff;
+    double note;
     Equipe equipe;
 
 public:
 
-    Note(unsigned int note, const Equipe &equipe);
+    Note(double note, const Equipe &equipe);
 
-    unsigned int getNote() const;
+    double getNote() const;
 
     void setNote(unsigned int note);
-
-    static const long getCoeff();
 
     const Equipe &getEquipe() const;
 

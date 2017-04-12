@@ -1,7 +1,3 @@
-//
-// Created by idu on 11/04/2017.
-//
-
 #include "Etape.h"
 
 Etape::Etape(double duree, unsigned int num) : duree(duree),ordre(num),termine(false) {}
@@ -23,7 +19,10 @@ void Etape::setNotes(const vector<Note> &notes) {
     Etape::notes = notes;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 unsigned int Etape::getOrdre() const {
     return ordre;
 }

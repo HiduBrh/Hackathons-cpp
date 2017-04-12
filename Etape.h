@@ -19,7 +19,11 @@ private:
     bool termine;
 public:
 
+<<<<<<< HEAD
     Etape(double duree,unsigned int num);
+=======
+    Etape(double duree, unsigned int num);
+>>>>>>> origin/master
 
     double getDuree() const;
 
@@ -28,8 +32,6 @@ public:
     const vector<Note> &getNotes() const;
 
     void setNotes(const vector<Note> &notes);
-
-    static unsigned int getOrdre_gen();
 
     unsigned int getOrdre() const;
 
