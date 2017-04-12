@@ -1,6 +1,6 @@
 #include "Note.h"
 
-Note::Note(double note, const Equipe &equipe) : equipe(equipe) {
+Note::Note(const double &note, const Equipe &equipe) : equipe(equipe) {
     this->setNote(note);
 }
 
@@ -8,9 +8,9 @@ double Note::getNote() const {
     return note;
 }
 
-void Note::setNote(unsigned int note) {
+void Note::setNote(const double &note) {
     this->note = note * this->equipe.get_coeff();
-    Equipe e=this->getEquipe();
+    Equipe e = this->getEquipe();
     e.updateNoteEquipe(note);
 }
 

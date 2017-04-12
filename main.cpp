@@ -3,15 +3,9 @@
 
 int main() {
     Utilisateur utilisateur;
-    Application application;
-    Hackathon hackathon;
 
-    utilisateur.set_application(application);
-
-    bool finirProgram = false;
     int selection = 0;
-    double duree;
-    int num;
+    int hackathon = 0;
 
     while (true) {
         std::cout << "1 Creer Hackaton" << std::endl;
@@ -34,28 +28,29 @@ int main() {
                 std::cout << utilisateur.get_application() << std::endl;
                 break;
             case 3:
-                std::cout << hackathon << std::endl;
+                std::cout << utilisateur.get_application()[hackathon] << std::endl;
                 break;
             case 4:
                 int i;
                 std::cout << "saisir le numéro du hackaton" << std::endl;
                 cin >> i;
-                hackathon = utilisateur.get_application()[i];
+                hackathon = i;
                 break;
             case 5: {
                 unsigned int number_member;
                 std::string name;
-                std::cout << "saisir le nom de l'equipe" << std::endl;
+                std::cout << "saisir le numero de l'equipe" << std::endl;
                 cin >> name;
                 std::cout << "et le nombre de membre" << std::endl;
                 cin >> number_member;
-                hackathon.ajouter_equipe(name, number_member);
+                utilisateur.get_application()[hackathon].ajouter_equipe(name, number_member);
                 break;
             }
             case 6: {
+                double duree;
                 std::cout << "saisir la duree de l'etape" << std::endl;
                 cin >> duree;
-                hackathon.ajouter_etape(duree);
+                utilisateur.get_application()[hackathon].ajouter_etape(duree);
                 break;
             }
             case 7: {
@@ -65,11 +60,11 @@ int main() {
                 cin >> id;
                 std::cout << "saisir la note de l'equipe" << std::endl;
                 cin >> note;
-                hackathon.ajouter_une_note(id, note);
+                utilisateur.get_application()[hackathon].ajouter_une_note(id, note);
                 break;
             }
             case 8:
-                hackathon.terminer_etape();
+                utilisateur.get_application()[hackathon].terminer_etape();
                 break;
             case 0:
                 exit(0);

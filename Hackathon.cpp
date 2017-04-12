@@ -59,7 +59,7 @@ Etape &Hackathon::recuperer_etape(const unsigned int num) {
 }
 
 void Hackathon::ajouter_une_note(const unsigned int &idEquipe, const double &note) {
-    Equipe equipe = recuperer_equipe(idEquipe);
+    Equipe & equipe = recuperer_equipe(idEquipe);
     this->etapes[this->etape_courrante].ajouter_une_note(Note(note, equipe));
 }
 

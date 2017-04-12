@@ -43,9 +43,7 @@ public:
 
     double getNoteGlobalHack() const;
 
-    void setNoteGlobalHack(double noteGlobalHack);
-
-    void updateNoteEquipe(double note);
+    void updateNoteEquipe(const double & note);
 
 };
 

@@ -11,12 +11,11 @@ private:
     Equipe equipe;
 
 public:
-
-    Note(double note, const Equipe &equipe);
+    Note(const double &note, const Equipe &equipe);
 
     double getNote() const;
 
-    void setNote(unsigned int note);
+    void setNote(const double &note);
 
     const Equipe &getEquipe() const;
 

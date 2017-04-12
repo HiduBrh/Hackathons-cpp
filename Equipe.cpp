@@ -66,10 +66,6 @@ double Equipe::getNoteGlobalHack() const {
     return noteGlobalHack;
 }
 
-void Equipe::setNoteGlobalHack(double noteGlobalHack) {
-    Equipe::noteGlobalHack = noteGlobalHack;
-}
-
-void Equipe::updateNoteEquipe(double note) {
+void Equipe::updateNoteEquipe(const double & note) {
     this->noteGlobalHack += note;
 }
