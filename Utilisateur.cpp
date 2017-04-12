@@ -10,8 +10,7 @@ Utilisateur::~Utilisateur() {
 }
 
 
-Application & Utilisateur::get_application() {
-
+Application &Utilisateur::get_application() {
     return this->application;
 }
 
