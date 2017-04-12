@@ -7,6 +7,8 @@
 
 #include "Note.h"
 #include <vector>
+#include <ostream>
+
 class Etape {
 
 private:
@@ -15,7 +17,7 @@ private:
     unsigned int ordre;
     double duree;
     vector<Note> notes;
-
+    bool termine;
 public:
 
     Etape(double duree);
@@ -34,7 +36,12 @@ public:
 
     void ajouter_une_note(Note note);
 
+    friend ostream &operator<<(ostream &os, const Etape &etape);
 
+    void terminer_etape();
+
+
+    virtual ~Etape();
 };
 
 

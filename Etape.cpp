@@ -4,7 +4,7 @@
 
 #include "Etape.h"
 
-Etape::Etape(double duree) : duree(duree),ordre(++Etape::ordre_gen)  {}
+Etape::Etape(double duree) : duree(duree),ordre(++Etape::ordre_gen),termine(false) {}
 
 
 double Etape::getDuree() const {
@@ -34,5 +34,19 @@ unsigned int Etape::getOrdre() const {
 void Etape::ajouter_une_note(Note note){
     notes.push_back(note);
 }
+
+ostream &operator<<(ostream &os, const Etape &etape) {
+    os << "ordre: " << etape.ordre << " duree: " << etape.duree;
+    return os;
+}
+void Etape::terminer_etape(){
+    this->termine=true;
+}
+
+Etape::~Etape() {
+    notes.clear();
+}
+
+
 
 
