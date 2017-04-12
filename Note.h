@@ -13,7 +13,7 @@ class Note {
 private:
 
     unsigned int note;
-    static const  coeff=0.05;
+    static const float coeff;
     Equipe equipe;
 
 public:

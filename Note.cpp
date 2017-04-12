@@ -4,6 +4,8 @@
 
 #include "Note.h"
 
+const float Note::coeff = 0.05;
+
 Note::Note(unsigned int note, const Equipe &equipe) : equipe(equipe) {
     if(equipe.getMembres_number()==5)
         this->note=note;
