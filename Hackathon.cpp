@@ -1,6 +1,10 @@
 #include "Hackathon.h"
 
 
+Hackathon::Hackathon() {
+    ordre_gen = 0;
+}
+
 const vector<Equipe> &Hackathon::getEquipes() {
     return equipes;
 }
@@ -15,10 +19,6 @@ const vector<Etape> &Hackathon::getEtapes() {
 
 void Hackathon::setEtapes(const vector<Etape> &etapes) {
     this->etapes = etapes;
-}
-
-Hackathon::Hackathon() {
-    ordre_gen = 0;
 }
 
 void Hackathon::afficher_classement() {
@@ -46,8 +46,8 @@ Equipe &Hackathon::recuperer_equipe(const string &nom) {
     }
 }
 
-void Hackathon::ajouter_etape(const double duree, unsigned int num) {
-    etapes.push_back(Etape(duree, num));
+void Hackathon::ajouter_etape(const double duree) {
+    etapes.push_back(Etape(duree, this->ordre_gen++));
 }
 
 Etape &Hackathon::recuperer_etape(const unsigned int num) {

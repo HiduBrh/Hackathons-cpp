@@ -31,7 +31,7 @@ public:
 
     Equipe &recuperer_equipe(const string &nom);
 
-    void ajouter_etape(const double duree, unsigned int num);
+    void ajouter_etape(const double duree);
 
     Etape &recuperer_etape(const unsigned int num);
 
