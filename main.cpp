@@ -10,7 +10,7 @@ int main() {
 
 
     utilisateur.get_application()[0];
-
+    bool finirProgram = false;
     int selection = 0;
     string name;
     double duree;
@@ -72,10 +72,6 @@ int main() {
             default:
                 cout << "Mauvaise entrée.\n";
         }
-
-
-        return 0;
     } while (selection != 5);
-
-
+    return (0);
 }
