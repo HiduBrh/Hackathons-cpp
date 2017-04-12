@@ -35,7 +35,7 @@ public:
 
     Etape &recuperer_etape(const unsigned int num);
 
-    void &afficher_classement();
+    void afficher_classement();
 
     void ajouter_une_note(double note, const string &nom_equipe);
 
