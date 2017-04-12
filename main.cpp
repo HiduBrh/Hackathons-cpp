@@ -12,7 +12,7 @@ int main() {
 
 
     utilisateur.get_application()[0];
-
+    bool finirProgram= false;
     int selection = 0;
 
     do{
@@ -76,9 +76,9 @@ int main() {
 
 
 
-        return 0;
+
     }
     while (selection != 5);
-
+return (0);
 
 }
