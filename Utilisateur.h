@@ -1,0 +1,10 @@
+#ifndef HACKATHONS_UTILISATEUR_H
+#define HACKATHONS_UTILISATEUR_H
+
+
+class Utilisateur {
+
+};
+
+
+#endif //HACKATHONS_UTILISATEUR_H
