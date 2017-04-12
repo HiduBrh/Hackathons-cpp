@@ -9,10 +9,14 @@ class Equipe {
 
 private:
 
+    const static double COEFF_DEFAUT;
+    const static double VARIATION_COEFF;
+    const static int NOMBRE_MEMBRE_DEFAUT;
+
     static unsigned int id_gen;
     unsigned int id;
     string nom;
-    unsigned int membres_number;
+    unsigned int nombreMembres;
 
 public:
 
@@ -31,6 +35,8 @@ public:
     static unsigned int getId_gen();
 
     unsigned int getId() const;
+
+    double get_coeff() const;
 
     friend ostream &operator<<(ostream &os, const Equipe &equipe);
 };

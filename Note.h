@@ -7,20 +7,16 @@
 class Note {
 
 private:
-
-    unsigned int note;
-    static const float coeff;
+    double note;
     Equipe equipe;
 
 public:
 
-    Note(unsigned int note, const Equipe &equipe);
+    Note(double note, const Equipe &equipe);
 
-    unsigned int getNote() const;
+    double getNote() const;
 
     void setNote(unsigned int note);
-
-    static const long getCoeff();
 
     const Equipe &getEquipe() const;
 
