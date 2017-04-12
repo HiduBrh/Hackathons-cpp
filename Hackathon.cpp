@@ -29,7 +29,6 @@ void Hackathon::afficher_classement() {
     for (auto const &equipe : equipes) {
         cout << equipe.getNom() << " :\t" << equipe.getNoteGlobalHack() << endl;
     }
-
 }
 
 bool Hackathon::compare(Equipe i, Equipe j) {
