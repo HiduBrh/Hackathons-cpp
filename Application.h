@@ -14,7 +14,7 @@ public:
 
     Hackathon operator[](const int &i) const;
 
-    Hackathon & creer_hackaton();
+    int creer_hackaton();
 
 private:
     std::vector<Hackathon> hackatons;
