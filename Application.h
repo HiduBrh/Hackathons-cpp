@@ -16,6 +16,8 @@ public:
 
     int creer_hackaton();
 
+    friend ostream &operator<<(ostream &os, const Application& application);
+
 private:
     std::vector<Hackathon> hackatons;
 };

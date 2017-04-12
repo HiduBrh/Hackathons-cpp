@@ -21,3 +21,12 @@ int Application::creer_hackaton() {
     this->hackatons.push_back(Hackathon());
     return (int) this->hackatons.size() - 1;
 }
+
+
+ostream &operator<<(ostream &os, const Application &application) {
+    int i = 0;
+    for (vector<Hackathon>::iterator it = application.hackatons.begin(); it < application.hackatons.end(); ++it, ++i) {
+        os << i << "." << endl;
+    }
+    return os;
+}
