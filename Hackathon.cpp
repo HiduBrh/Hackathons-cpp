@@ -39,7 +39,6 @@ void Hackathon::afficher_classement() {
     for (auto const &note : notesProvisoires) {
         cout << note.first << " :\t" << note.second << endl;
     }
-
 }
 
 bool Hackathon::compare(double i, double j) {
