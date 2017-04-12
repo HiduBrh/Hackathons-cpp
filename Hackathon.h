@@ -19,7 +19,7 @@ private:
 public:
 
     void setEtapes(const vector<Etape> &etapes);
-    const vector<Equipe> &Hackathon::getEquipes();
+    const vector<Equipe> &getEquipes();
     void setEquipes(const vector<Equipe> &equipes);
     const vector<Etape> &getEtapes();
 
