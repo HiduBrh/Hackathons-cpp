@@ -3,6 +3,8 @@
 
 
 class Utilisateur {
+public:
+private:
 
 };
 
