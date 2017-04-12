@@ -26,7 +26,7 @@ int main() {
                 utilisateur.get_application().creer_hackaton();
                 break;
             case 2:
-                ...
+                utilisateur.get_application().get
                 break;
             case 3:
                 ...

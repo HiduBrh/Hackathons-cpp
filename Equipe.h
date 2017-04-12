@@ -1,13 +1,10 @@
-//
-// Created by idu on 11/04/2017.
-//
-
 #ifndef HACKATHONS_EQUIPE_H
 #define HACKATHONS_EQUIPE_H
 
 #include <iostream>
 
 using namespace std;
+
 class Equipe {
 
 private:

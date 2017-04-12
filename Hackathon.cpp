@@ -1,10 +1,4 @@
-//
-// Created by idu on 12/04/2017.
-//
-
 #include "Hackathon.h"
-
-
 
 const vector<Equipe> &Hackathon::getEquipes(){
     return equipes;
