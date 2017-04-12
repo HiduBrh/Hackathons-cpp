@@ -62,7 +62,7 @@ void Hackathon::ajouter_une_note(double note, const string &nom_equipe) {
     etapes.end().operator*().ajouter_une_note(Note(note, equipe));
 }
 
-void Hackathon::terminer_etape(){
+void Hackathon::terminer_etape() {
     etapes.end().operator*().terminer_etape();
     afficher_classement();
 }
