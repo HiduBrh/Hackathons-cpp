@@ -13,7 +13,8 @@ private:
     unsigned int ordre_gen;
     vector<Equipe> equipes;
     vector<Etape> etapes;
-    bool compare (double i,double j);
+
+    static bool compare(double i, double j);
 
 public:
     Hackathon();
@@ -25,12 +26,19 @@ public:
     void setEquipes(const vector<Equipe> &equipes);
 
     const vector<Etape> &getEtapes();
+
     void ajouter_equipe(const string &nom, unsigned int membres_number);
-    Equipe& recuperer_equipe(const string &nom);
+
+    Equipe &recuperer_equipe(const string &nom);
+
     void ajouter_etape(const double duree, unsigned int num);
-    Etape& recuperer_etape(const unsigned int num);
-    string &afficher_classement();
-    void ajouter_une_note(double note,const string& nom_equipe);
+
+    Etape &recuperer_etape(const unsigned int num);
+
+    void &afficher_classement();
+
+    void ajouter_une_note(double note, const string &nom_equipe);
+
     void terminer_etape();
 };
 

@@ -21,7 +21,7 @@ Hackathon::Hackathon() {
     ordre_gen = 0;
 }
 
-string &Hackathon::afficher_classement() {
+void &Hackathon::afficher_classement() {
     std::map<std::string, double> notesProvisoires;
     vector<Note> notes;
     for (vector<Etape>::iterator i = etapes.begin(); i != etapes.end(); ++i) {
