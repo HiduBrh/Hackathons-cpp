@@ -54,9 +54,7 @@ int main() {
             case 5: {
                 std::cout << "saisir la duree de l'etape" << std::endl;
                 cin >> duree;
-                std::cout << "et le numero de l'epreuve" << std::endl;
-                cin >> num;
-                hackathon.ajouter_etape(duree, num);
+                hackathon.ajouter_etape(duree);
                 break;
             }
             case 6: {
