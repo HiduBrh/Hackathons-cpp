@@ -6,7 +6,7 @@ Utilisateur::Utilisateur() {
 }
 
 Utilisateur::~Utilisateur() {
-    delete this->application;
+
 }
 
 const Application & Utilisateur::get_application() {
